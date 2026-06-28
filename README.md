@@ -1,13 +1,10 @@
-Tous les liens dont vous aurez besoin:
+# meteo
+Une application de météo pour l'esp8266-oled (HW-364A), adapté et amélioré depuis un autre projet existant.(certaines fonctionnalite ne sont que ici et non sur cette autre projet)
+*Ce projet est basé sur [CE PROJET](https://github.com/datatomotion/Station-M-t-o-Ultime-V1)*
 
-Installer le programme d’arduino sur le lien suivant :
-https://downloads.arduino.cc/arduino-1.8.19-windows.exe
+# Utilisation
+ETAPE 1 : Penser à bien personnaliser dans le fichier Station_meteo.ino les lignes 21, 22, 26 et 27 avec votre wifi, votre id de ville OpenWeather et votre cle d'api OpenWeather, vous pouver l'avoir [ICI](https://home.openweathermap.org/users/sign_up)
+ETAPE 2 : Dans la section OLED, décomenter la ligen correspondant a votre ecran (UNE A LA FOIS SINON CELA NE MARCHERA PAS !!) 
+ETAPE 3 :  Placer tous les fichier dans un dossier Station_meteo et ensuite lance arduino IDE et selectionner Station_meteo.ino et televerser le vers votre ESP8266
 
-Pour télécharger le pilote : Chercher dans le moteur de recherche google et trouver le pilote CH340 ou utiliser ce lien
-https://www.wch-ic.com/search?q=CH341SER&t=downloads
-
-Inscription à OpenWeatherMap et obtention de la clé API :
-https://home.openweathermap.org/users/sign_up
-
-Obtenez les clés API OpenWeatherMap pour le "Projet 1 : Station Météorologique"
-https://home.openweathermap.org/api_keys
+INFO : Une fois allume, l'esp fais 1 cycle de toutes les infos. l'ecran s'eteins ensuite et s'allume pendant 15 secondes avec l'heure toutes les 5 min. Vous pouvez mettre un bouton sur D3/GND. SI le bouton est presser, l'ecran s'allume et demarre son cycle des previsions, puis l'ecran s'eteins et se rallume toutes les 5min pour afficher l'heure.
